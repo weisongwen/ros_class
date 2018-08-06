@@ -20,7 +20,7 @@ publisher:
 $ cd $HOME
 $ mkdir template_ros/src
 $ cd template_ros/src
-$ git remote add origin https://github.com/weisongwen/ros_class.git
+$ git clone https://github.com/weisongwen/ros_class.git
 $ cd ..
 $ catkin_make
 ```
