@@ -44,10 +44,85 @@ $ cd $HOME/cat_ws/src/ivactuator/data
 $ rosbag play imu.bag
 ```
 
+### how to show what is in the /imu topic?
+```
+$ rostopic echo /imu
+```
+```
+header: 
+  seq: 7706
+  stamp: 
+    secs: 1488703480
+    nsecs: 392411775
+  frame_id: imu_link
+orientation: 
+  x: 0.0397092215717
+  y: 0.00633058696985
+  z: 0.172644585371
+  w: 0.984162986279
+orientation_covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+angular_velocity: 
+  x: 0.00770223420113
+  y: 0.0133386412635
+  z: 0.298744618893
+angular_velocity_covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+linear_acceleration: 
+  x: -0.462217539549
+  y: 0.82411634922
+  z: 10.5903949738
+linear_acceleration_covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+---
+header: 
+  seq: 7707
+  stamp: 
+    secs: 1488703480
+    nsecs: 400926097
+  frame_id: imu_link
+orientation: 
+  x: 0.0397337637842
+  y: 0.00631054723635
+  z: 0.17284142971
+  w: 0.984127640724
+orientation_covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+angular_velocity: 
+  x: 0.00446937792003
+  y: 0.0157519895583
+  z: 0.297159343958
+angular_velocity_covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+linear_acceleration: 
+  x: -0.761591672897
+  y: 0.844375252724
+  z: 10.3588495255
+linear_acceleration_covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+---
+header: 
+  seq: 7708
+  stamp: 
+    secs: 1488703480
+    nsecs: 412612312
+  frame_id: imu_link
+orientation: 
+  x: 0.0397733263671
+  y: 0.00629096990451
+  z: 0.173106268048
+  w: 0.984079658985
+orientation_covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+angular_velocity: 
+  x: 0.00744306994602
+  y: 0.014955855906
+  z: 0.299250811338
+angular_velocity_covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+linear_acceleration: 
+  x: -1.03676986694
+  y: 0.68077814579
+  z: 10.4217367172
+linear_acceleration_covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+---
 
+```
 ## Claim
 
-If there is any thing inappropriate, please contact me through 17902061r@connect.polyu.hk (Weisong WEN).
+If there is any thing inappropriate, please contact me through weisong.wen@berkeley.edu (Weisong WEN).
 
 ## LICENSE
 ### BSD License – PolyU
