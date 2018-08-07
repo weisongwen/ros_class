@@ -19,6 +19,7 @@
 #include <boost/bind.hpp>
 #include "pthread.h"
 #include <sensor_msgs/Imu.h>
+#include <geometry_msgs/Point.h>
 using namespace std;
 using namespace boost::asio; 
 using namespace boost;
@@ -34,8 +35,15 @@ class actuator{
   private:  	
     ros::NodeHandle m_handle;
     ros::Publisher  imu_pub;
+    ros::Publisher trans_pub;
     ros::Subscriber imu_sub;
     float count;
+
+    float vx,vy,vz; // vel 
+    float sx,sy,sz; // translatio
+    double preTime;
+
+
 };
 
 #endif /*ACTUALOR_H*/

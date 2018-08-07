@@ -1,6 +1,7 @@
 # Template for writing ROS node package, using C++
 
 This ros node firstly subscribe the topic (/imu), then publish the content with new topic name (/imu2).
+calculate the translation based on the axis acc. the translation is published as topic (/translation).
 
 [imu](https://baike.baidu.com/item/%E6%83%AF%E6%80%A7%E6%B5%8B%E9%87%8F%E5%8D%95%E5%85%83/7942440?fr=aladdin) is a sensor to measure the acceleration of objects,
 
@@ -13,6 +14,7 @@ publisher:
 
 ```
 /imu2
+/translation
 ```
 ## How to Build
 
