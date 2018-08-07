@@ -29,18 +29,18 @@ $ catkin_make
 ### Method 1:
 ```
 $ cd $HOME/template_ros
-$ source dev/setup.bash
+$ source devel/setup.bash
 $ roslaunch ivactuator starup.launch
-$ cd $HOME/cat_ws/src/ivactuator/data
+$ cd $HOME/template_ros/src/ivactuator/data
 $ rosbag play imu.bag
 ```
 
 ### Method 2:
 ```
 $ cd $HOME/template_ros
-$ source dev/setup.bash
-$ rosrun ivactuator ivactuator
-$ cd $HOME/cat_ws/src/ivactuator/data
+$ source devel/setup.bash
+$ roslaunch ivactuator starup.launch
+$ cd $HOME/template_ros/src/ivactuator/data
 $ rosbag play imu.bag
 ```
 
