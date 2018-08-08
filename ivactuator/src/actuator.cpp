@@ -24,6 +24,10 @@ actuator::actuator(ros::NodeHandle handle)
     sx = 0;
     sy = 0;
     sz = 0;
+
+    angx = 0;
+    angy = 0;
+    angz = 0;
 }
 
 /**
@@ -33,6 +37,7 @@ void actuator::run()
 {
     imu_pub = m_handle.advertise<sensor_msgs::Imu>("/imu2",1000);
     trans_pub = m_handle.advertise<geometry_msgs::Point>("/translation",1000);
+    ang_pub = m_handle.advertise<geometry_msgs::Point>("/angular",1000);
     imu_sub = m_handle.subscribe("/imu", 500, &actuator::imu_callback, this); // callback for /imu topic
     boost::thread thread(boost::bind(&actuator::callback_sendthread, this) );  
     thread.detach();
@@ -123,5 +128,16 @@ void actuator::imu_callback(const sensor_msgs::ImuConstPtr& imu_msg)
     translation.z = sz;
 
     trans_pub.publish(translation);
+
+    angx = angx + received_imu.angular_velocity.x * delt_time; // asume acc do not change between two topic
+    angy = angy + received_imu.angular_velocity.y * delt_time; // asume acc do not change between two topic
+    angz = angz + received_imu.angular_velocity.z * delt_time; // asume acc do not change between two topic
+
+    geometry_msgs::Point ang;
+    ang.x = angx;
+    ang.y = angy;
+    ang.z = angz;
+    ang_pub.publish(ang);
+
 
 }

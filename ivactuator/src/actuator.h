@@ -36,12 +36,15 @@ class actuator{
     ros::NodeHandle m_handle;
     ros::Publisher  imu_pub;
     ros::Publisher trans_pub;
+    ros::Publisher ang_pub;
     ros::Subscriber imu_sub;
     float count;
 
     float vx,vy,vz; // vel 
     float sx,sy,sz; // translatio
     double preTime;
+
+    double angx,angy,angz;
 
 
 };
